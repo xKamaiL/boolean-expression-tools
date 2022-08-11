@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box {
+	@apply shadow border;
+	@apply p-4 cursor-pointer transition-all;
+	@apply rounded text-center bg-gray-200 hover:bg-gray-300;
+}
