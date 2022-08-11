@@ -7,3 +7,90 @@
 	@apply p-4 cursor-pointer transition-all;
 	@apply rounded text-center bg-gray-200 hover:bg-gray-300;
 }
+
+.btn {
+	@apply font-medium inline-flex items-center justify-center border-2 border-transparent transition  shadow hover:shadow-lg rounded text-base;
+	@apply transition-all;
+}
+
+.btn-sm {
+	@apply px-6 py-1;
+}
+
+.btn-md {
+	@apply px-5 py-2;
+}
+
+.btn-primary-outline {
+	@apply border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white;
+}
+
+.btn-dark {
+	&:disabled {
+		@apply bg-gray-100;
+	}
+
+	@apply bg-gray-900 hover:bg-gray-800 text-white;
+}
+
+.btn-dark-outline {
+	@apply border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white;
+}
+
+.text-highlight {
+	@apply bg-clip-text pt-2 text-transparent bg-gradient-to-r font-extrabold;
+}
+
+.btn-secondary-outline {
+	@apply hover:bg-gray-200 border-gray-200 bg-gray-200 hover:bg-gray-300 text-gray-800 shadow-none;
+}
+
+.btn-primary {
+	&:disabled {
+		@apply bg-gray-100;
+	}
+
+	@apply bg-blue-600 hover:bg-blue-700 text-white;
+}
+
+.btn-back {
+	@apply bg-gray-900 text-white hover:bg-gray-800;
+}
+
+.btn-white-outline {
+	@apply bg-white text-gray-900 hover:bg-gray-900 hover:text-white border-gray-900;
+}
+
+.btn-blue-outline {
+	@apply border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white;
+}
+
+* {
+	font-family: 'Sarabun', sans-serif;
+	@apply text-gray-800;
+}
+
+.form-group {
+	@apply mb-2 flex items-center flex-1 space-x-2;
+	label {
+		@apply w-1/5;
+		@apply items-center  font-semibold;
+	}
+	input {
+		@apply w-3/5;
+		@apply transition-all;
+		@apply bg-gray-100 text-gray-900 border  rounded block p-2.5;
+		@apply border-gray-200 outline-0;
+		@apply focus:ring-blue-500 focus:border-blue-500;
+	}
+	button {
+		@apply hover:bg-gray-100 h-full block w-12 text-red-400 hover:text-red-600 transition-all;
+	}
+}
+
+.form-control {
+	@apply transition-all;
+	@apply bg-gray-100 text-gray-900 border  rounded block p-2.5;
+	@apply border-gray-200 outline-0;
+	@apply focus:ring-blue-500 focus:border-blue-500 w-full;
+}
