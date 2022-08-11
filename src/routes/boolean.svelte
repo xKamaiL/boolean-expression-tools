@@ -43,7 +43,7 @@
     const convert = (str, varName) => {
 
         if (varName.trim().length == 0 || str == null) {
-            return "Please enter variable name : " + varName
+            return "Please enter variable name : "
         }
         return `(${str.split(" ").filter(x => x !== "+")
             .map(x => {
@@ -94,7 +94,9 @@
         </div>
         <div class="mt-10 bg-gray-100 rounded p-4">
             <p bind:this={p} on:click={() => {
-                console.log(p)
+                if (result === "Please enter variable name : ") {
+                    return
+                }
                 var selection = window.getSelection();
                 var txt = p
                 var range = document.createRange();
