@@ -40,7 +40,7 @@
     })
 
 
-    const convert = (str) => {
+    const convert = (str, varName) => {
 
         if (varName.trim().length == 0 || str == null) {
             return "Please enter variable name : " + varName
@@ -59,7 +59,10 @@
             .join(") or (")})`
     }
 
-    $: result = convert(text)
+    $: {
+
+        result = convert(text, varName);
+    }
     $: {
         if (browser && text != "" && varName != "") {
             const params = new URLSearchParams(location.search);
